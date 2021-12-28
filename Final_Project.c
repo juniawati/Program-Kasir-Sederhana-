@@ -18,6 +18,10 @@
 ************************************************************************************
 */
 
+//fungsi deklarasi
+void program_kasir();
+void listparfum();
+
 int main(){
 
     //Variabel yang diperlukan login dan register
@@ -102,6 +106,57 @@ if(userbenar!=0 || passbenar!=0){
     printf("\t\t+---------------------------------------------------------+\n");
     goto login;
 }else {
+    //jika berhasil login
+    //VARIABEL
+    int submenu;
+    system("cls");
+        submenu :
+        printf("\t\t+---------------------------------------------------------+\n");
+        printf("\t\t| No. |   Pilihan                                         |\n");
+        printf("\t\t+---------------------------------------------------------+\n");
+        printf("\t\t| 1.  |   Program Utama Kasir                             |\n");
+        printf("\t\t| 2.  |   List Parfum                                     |\n");
+        printf("\t\t| 3.  |   Keluar                                          |\n");
+        printf("\t\t+---------------------------------------------------------+\n");
+        printf("\t\t Pilih Menu :");
+        scanf("%d", &submenu);
+        printf("\t\t|                                                         |\n");
+        system("cls");
+
+        switch (submenu){
+            case 1:
+                program_kasir();
+                goto submenu;
+
+            case 2:
+                list_parfum();
+                goto submenu;
+
+            case 3:
+                return 0;
+
+        }
+
+
+
+}
+
+/************************************CASE 3 KELUAR***************************************/
+case 3 :
+    printf("\t\t+---------------------------------------------------------+\n");
+    printf("\t\t|                      TERIMAKASIH                        |\n");
+    printf("\t\t+---------------------------------------------------------+\n");
+    return 0;
+
+
+}
+}
+
+
+
+
+//FUNGSI JALANKAN KASIR
+void program_kasir(){
 /* Program kasir */
     //deklarasi variabel yang dibutuhkan untuk menjalankan program kasir perfume
     int pilihan, pilih, jumlah, grandtotal=0, bayar=0;
@@ -120,7 +175,7 @@ system("cls");
     printf("\t\t| 2. Sakura Bloom        | Rp. 450.000                    |\n");
     printf("\t\t| 3. Karachi Woman       | Rp. 100.000                    |\n");
     printf("\t\t+---------------------------------------------------------+\n");
-    printf("\t\t Berapa banyak parfum yang ingin di pesan: ");
+    printf("\t\t Berapa banyak jenis parfum yang ingin di pesan: ");
         scanf("%d", &pilihan);
         for (int i=0; i<pilihan; i++){
         pilihan:
@@ -160,7 +215,7 @@ system("cls");
                 goto pilihan;
             }
         }
-    printf("\t\t Total Harga : %d\n", grandtotal);
+    printf("\n\t\t Total Harga : %d\n", grandtotal);
 
     repeat:
         if(bayar == 0 || bayar<grandtotal){
@@ -193,21 +248,16 @@ switch(konfirmasi){
        break;
 
 }
-
-
-
-
-    goto menu;
 }
+//batas fungsi kasir
 
-/************************************CASE 3 KELUAR***************************************/
-case 3 :
-    printf("\t\t+---------------------------------------------------------+\n");
-    printf("\t\t|                      TERIMAKASIH                        |\n");
-    printf("\t\t+---------------------------------------------------------+\n");
-    return 0;
-
+//fungsi list parfum
+void list_parfum(){
+    printf("\n\n\t\t|-------------------List Parfum---------------------|\n");
+    printf("\t\t| No.  Perfume         Kode    | Price              |\n");
+    printf("\t\t| 1. Giordani Gold      GG1    | Rp. 200.000        |\n");
+    printf("\t\t| 2. Sakura Bloom       SB1    | Rp. 450.000        |\n");
+    printf("\t\t| 3. Karachi Woman      kW1    | Rp. 100.000        |\n");
+    printf("\t\t+---------------------------------------------------+\n");
 
 }
-}
-
