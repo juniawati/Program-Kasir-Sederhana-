@@ -21,6 +21,8 @@
 //fungsi deklarasi
 void program_kasir();
 void listparfum();
+void tentang_kami();
+void kontak();
 
 int main(){
 
@@ -116,7 +118,8 @@ if(userbenar!=0 || passbenar!=0){
         printf("\t\t+---------------------------------------------------------+\n");
         printf("\t\t| 1.  |   Program Utama Kasir                             |\n");
         printf("\t\t| 2.  |   List Parfum                                     |\n");
-        printf("\t\t| 3.  |   Keluar                                          |\n");
+        printf("\t\t| 3.  |   Tentang kami                                     |\n");
+        printf("\t\t| 4.  |   Keluar                                          |\n");
         printf("\t\t+---------------------------------------------------------+\n");
         printf("\t\t Pilih Menu :");
         scanf("%d", &submenu);
@@ -133,6 +136,10 @@ if(userbenar!=0 || passbenar!=0){
                 goto submenu;
 
             case 3:
+                tentang_kami();
+                goto submenu;
+
+            case 4:
                 return 0;
 
         }
@@ -261,3 +268,29 @@ void list_parfum(){
     printf("\t\t+---------------------------------------------------+\n");
 
 }
+
+//fungsi tentang kami
+void tentang_kami(){
+
+printf("\n\n\t\t|-------------------Tentang Kami---------------------|\n");
+    printf("\t\t|    Niko’s Perfume Mart adalah toko online parfume  |\n");
+    printf("\t\t|    terbaik no. 1 di Indonesia. Kami menyediakan    |\n");
+    printf("\t\t|    berbagai jenis dan merek parfume mulai dari     |\n");
+    printf("\t\t|    yang termurah dan yang termahal. Toko kami      |\n");
+    printf("\t\t|    memiliki beberapa keunggulan yaitu menyediakan  |\n");
+    printf("\t\t|    parfume dengan harga termurah seIndonesia,      |\n");
+    printf("\t\t|    parfume yang kami tawarkan pasti original,      |\n");
+    printf("\t\t|    memberi garansi saat pengiriman                 |\n");
+    printf("\t\t+---------------------------------------------------+\n");
+
+    printf("\n\n\t\t|----------------------VISI-------------------------|\n");
+    printf("\t\t\t\t|Maju,Maju,Jaya| \n");
+
+    printf("\n\n\t\t|----------------------MISI-------------------------|\n");
+    printf("\t\t|  1.Menyenangkan hati pelanggan dengan produk yang |\n");
+    printf("\t\t|    kamin jual.                                    |\n");
+    printf("\t\t|  2.Menjadi toko parfume terbesar.                 |\n");
+    printf("\t\t|  3.Membanggakan bangsa dan negara.                |\n\n\n");
+}
+//batas fungsi tentang kami
+
