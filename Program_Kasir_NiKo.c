@@ -7,7 +7,7 @@
 
 int main(void){
     //deklarasi variabel yang dibutuhkan untuk menjalankan program kasir perfume
-    int menu, pilih, jumlah, grandtotal=0, bayar=0;
+    int pilihan, pilih, jumlah, grandtotal=0, bayar=0;
     char konfirmasi;
 
     up:
@@ -16,13 +16,13 @@ int main(void){
         printf("\t\t 1. Giordani Gold       | Rp. 200.000\n");
         printf("\t\t 2. Sakura Bloom        | Rp. 450.000\n");
         printf("\t\t 3. Karachi Woman       | Rp. 100.000\n");
-        //sementara list produk 3 dulu, nanti akan di tambah untuk progress berikutnya
-        //ini untuk test program berhasil atau tidak
+
+
         printf("\t\t-------------------------------------\n");
         printf("\t\t Berapa banyak parfum yang ingin di pesan: ");
-        scanf("%d", &menu);
-        for (int i=0; i<menu; i++){
-        menu:
+        scanf("%d", &pilihan);
+        for (int i=0; i<pilihan; i++){
+        pilihan:
         printf("\n\t\t Pilih Parfum : "); scanf("%d", &pilih);
 
         switch(pilih){
@@ -56,7 +56,7 @@ int main(void){
 
             default:
                 printf("\t\tParfum Tidak Ada Dalam List Kami\n");
-                goto menu;
+                goto pilihan;
             }
         }
     printf("\t\t Total Harga : %d\n", grandtotal);
@@ -86,7 +86,7 @@ switch(konfirmasi){
         break;
     case 'n':
     case 'N':
-       menu = pilih=jumlah = grandtotal=bayar=0;
+       pilihan = pilih=jumlah = grandtotal=bayar=0;
        system("cls");
        goto up;
        break;
