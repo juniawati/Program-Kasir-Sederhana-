@@ -14,17 +14,23 @@
 *   Keterangan  : Membuat Registrasi dan Login                                     *
 *   Tanggal : 21 Desember                                                          *
 *   Keterangan : Melanjutkan Progress                                              *
+*   Tanggal  : 30 Desember 2021                                                    *
+*   Keterangan : REVISI                                                            *
 *                                                                                  *
 ************************************************************************************
 */
 
 //fungsi deklarasi
 void program_kasir();
-void listparfum();
+void list_parfum();
 void tentang_kami();
-void kontak();
+
+
 
 int main(){
+
+
+
 
     //Variabel yang diperlukan login dan register
     char username[10], password[10], user[10], pass[10];
@@ -42,8 +48,8 @@ menu :
 printf("\t\t+---------------------------------------------------------+\n");
 printf("\t\t| No. |   Pilihan                                         |\n");
 printf("\t\t+---------------------------------------------------------+\n");
-printf("\t\t| 1.  |   Registrasi                                      |\n");
-printf("\t\t| 2.  |   Login                                           |\n");
+printf("\t\t| 1.  |   Registrasi Petugas                              |\n");
+printf("\t\t| 2.  |   Login Petugas                                   |\n");
 printf("\t\t| 3.  |   Keluar                                          |\n");
 printf("\t\t+---------------------------------------------------------+\n");
 printf("\t\t Pilih Menu :");
@@ -118,7 +124,7 @@ if(userbenar!=0 || passbenar!=0){
         printf("\t\t+---------------------------------------------------------+\n");
         printf("\t\t| 1.  |   Program Utama Kasir                             |\n");
         printf("\t\t| 2.  |   List Parfum                                     |\n");
-        printf("\t\t| 3.  |   Tentang kami                                     |\n");
+        printf("\t\t| 3.  |   Tentang kami                                    |\n");
         printf("\t\t| 4.  |   Keluar                                          |\n");
         printf("\t\t+---------------------------------------------------------+\n");
         printf("\t\t Pilih Menu :");
@@ -156,6 +162,7 @@ case 3 :
     return 0;
 
 
+
 }
 }
 
@@ -181,8 +188,17 @@ system("cls");
     printf("\t\t| 1. Giordani Gold       | Rp. 200.000                    |\n");
     printf("\t\t| 2. Sakura Bloom        | Rp. 450.000                    |\n");
     printf("\t\t| 3. Karachi Woman       | Rp. 100.000                    |\n");
+    printf("\t\t| 4. Saint Laurent       | Rp. 820.000                    |\n");
+    printf("\t\t| 5. Dior VIP            | Rp. 340.000                    |\n");
+    printf("\t\t| 6. Hugo Boss           | Rp. 110.000                    |\n");
+    printf("\t\t| 7. Innisfree           | Rp. 320.000                    |\n");
+    printf("\t\t| 8. Zwitzal Baby        | Rp. 50.000                     |\n");
+    printf("\t\t| 9. Love Bonito         | Rp. 125.000                    |\n");
+    printf("\t\t| 10.The Body Shop       | Rp. 99.000                     |\n");
     printf("\t\t+---------------------------------------------------------+\n");
-    printf("\t\t Berapa banyak jenis parfum yang ingin di pesan: ");
+
+    printf("\t\t Berapa banyak jenis parfum yang di pesan: ");
+
         scanf("%d", &pilihan);
         for (int i=0; i<pilihan; i++){
         pilihan:
@@ -217,6 +233,71 @@ system("cls");
             grandtotal +=jumlah*100000;
             break;
 
+            case 4 :
+            printf("\t\t-----Detail Transaksi----\n");
+            printf("\t\t Anda memilih parfum Saint Laurent dengan harga Rp.820.000\n");
+            printf("\t\t Masukkan jumlah yang ingin di beli:"); scanf("%d", &jumlah);
+            printf("\t\t_______________________________________________________________\n");
+            printf("\t\t Harga\t:Rp.%d\n,", jumlah*820000);
+            grandtotal +=jumlah*820000;
+            break;
+
+            case 5 :
+            printf("\t\t-----Detail Transaksi----\n");
+            printf("\t\t Anda memilih parfum Dior VIP dengan harga Rp.340.000\n");
+            printf("\t\t Masukkan jumlah yang ingin di beli:"); scanf("%d", &jumlah);
+            printf("\t\t_______________________________________________________________\n");
+            printf("\t\t Harga\t:Rp.%d\n,", jumlah*340000);
+            grandtotal +=jumlah*340000;
+            break;
+
+
+
+            case 6  :
+            printf("\t\t-----Detail Transaksi----\n");
+            printf("\t\t Anda memilih parfum Hugo Boss dengan harga Rp.110.000\n");
+            printf("\t\t Masukkan jumlah yang ingin di beli:"); scanf("%d", &jumlah);
+            printf("\t\t_______________________________________________________________\n");
+            printf("\t\t Harga\t:Rp.%d\n,", jumlah*110000);
+            grandtotal +=jumlah*110000;
+            break;
+
+            case 7 :
+            printf("\t\t-----Detail Transaksi----\n");
+            printf("\t\t Anda memilih parfum Innisfree dengan harga Rp.320.000\n");
+            printf("\t\t Masukkan jumlah yang ingin di beli:"); scanf("%d", &jumlah);
+            printf("\t\t_______________________________________________________________\n");
+            printf("\t\t Harga\t:Rp.%d\n,", jumlah*320000);
+            grandtotal +=jumlah*320000;
+            break;
+
+            case 8 :
+            printf("\t\t-----Detail Transaksi----\n");
+            printf("\t\t Anda memilih parfum Zwitzal Baby dengan harga Rp.50.000\n");
+            printf("\t\t Masukkan jumlah yang ingin di beli:"); scanf("%d", &jumlah);
+            printf("\t\t_______________________________________________________________\n");
+            printf("\t\t Harga\t:Rp.%d\n,", jumlah*50000);
+            grandtotal +=jumlah*50000;
+            break;
+
+            case 9 :
+            printf("\t\t-----Detail Transaksi----\n");
+            printf("\t\t Anda memilih parfum Love Bonito dengan harga Rp.125.000\n");
+            printf("\t\t Masukkan jumlah yang ingin di beli:"); scanf("%d", &jumlah);
+            printf("\t\t_______________________________________________________________\n");
+            printf("\t\t Harga\t:Rp.%d\n,", jumlah*125000);
+            grandtotal +=jumlah*125000;
+            break;
+
+            case 10 :
+            printf("\t\t-----Detail Transaksi----\n");
+            printf("\t\t Anda memilih parfum The Body Shop dengan harga Rp.99.000\n");
+            printf("\t\t Masukkan jumlah yang ingin di beli:"); scanf("%d", &jumlah);
+            printf("\t\t_______________________________________________________________\n");
+            printf("\t\t Harga\t:Rp.%d\n,", jumlah*99000);
+            grandtotal +=jumlah*99000;
+            break;
+
             default:
                 printf("\t\tParfum Tidak Ada Dalam List Kami\n");
                 goto pilihan;
@@ -230,8 +311,14 @@ system("cls");
 
         }
         if(bayar != 0 && bayar >= grandtotal){
-            printf("\t\t Tunai : Rp.%d\n", bayar);
-            printf("\t\t Kembali : Rp.%d\n", bayar - grandtotal);
+            printf("\t\t+---------------------------------------------------------+\n");
+            printf("\t\t|         TERIMAKASIH SUDAH MEMBELI PRODUK KAMI           |\n");
+            printf("\t\t+---------------------------------------------------------+\n");
+            printf("\t\t|                      Detail Transaksi                   |\n");
+            printf("\t\t|       Total Harga Parfum :                              |\n");
+            printf("\t\t|       Nominal Bayar      : Rp.%d\n", bayar);
+            printf("\t\t|       Kembalian          : Rp.%d\n", bayar - grandtotal);
+            printf("\t\t+---------------------------------------------------------+\n");
         }else if (bayar!= 0 == bayar < grandtotal){
             printf("\t\tUang Anda Kurang Rp.%d\n", grandtotal-bayar);
             goto repeat;
@@ -265,11 +352,18 @@ void list_parfum(){
     printf("\t\t| 1. Giordani Gold      GG1    | Rp. 200.000        |\n");
     printf("\t\t| 2. Sakura Bloom       SB1    | Rp. 450.000        |\n");
     printf("\t\t| 3. Karachi Woman      kW1    | Rp. 100.000        |\n");
+    printf("\t\t| 4. Saint Laurent      SL01   | Rp. 820.000        |\n");
+    printf("\t\t| 5. Dior VIP           DVIP   | Rp. 340.000        |\n");
+    printf("\t\t| 6. Hugo Boss          HB01   | Rp. 110.000        |\n");
+    printf("\t\t| 7. Innisfree          INN1   | Rp. 320.000        |\n");
+    printf("\t\t| 8. Zwitzal Baby       ZB01   | Rp. 50.000         |\n");
+    printf("\t\t| 9. Love Bonito        LB01   | Rp. 125.000        |\n");
+    printf("\t\t| 10.The Body Shop      TBS1   | Rp. 99.000         |\n");
     printf("\t\t+---------------------------------------------------+\n");
 
 }
 
-//fungsi tentang kami
+//fungsi tentang kami BY KOKO
 void tentang_kami(){
 
 printf("\n\n\t\t|-------------------Tentang Kami---------------------|\n");
