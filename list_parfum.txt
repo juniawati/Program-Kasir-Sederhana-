@@ -1,3 +1,13 @@
-Giordani 
-Sakura
-Karachi 
+|-------------------List Parfum---------------------|
+| No.  Perfume          Kode   | Price              |
+| 1. Giordani Gold      GG1    | Rp. 200.000        |
+| 2. Sakura Bloom       SB1    | Rp. 450.000        |
+| 3. Karachi Woman      kW1    | Rp. 100.000        |
+| 4. Saint Laurent      SL01   | Rp. 820.000        |
+| 5. Dior VIP           DVIP   | Rp. 340.000        |
+| 6. Hugo Boss          HB01   | Rp. 110.000        |
+| 7. Innisfree          INN1   | Rp. 320.000        |
+| 8. Zwitzal Baby       ZB01   | Rp. 50.000         |
+| 9. Love Bonito        LB01   | Rp. 125.000        |
+| 10.The Body Shop      TBS1   | Rp. 99.000         |
++---------------------------------------------------+
